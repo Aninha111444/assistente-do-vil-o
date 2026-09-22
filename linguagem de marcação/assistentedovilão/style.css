@@ -1,0 +1,737 @@
+/* ==================================================
+   CONFIGURAÇÕES GERAIS
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFF7FC;
+    color: #46284B;
+}
+
+
+/* ==================================================
+   CABEÇALHO
+================================================== */
+
+.cabecalho {
+    background-color: #6C1E9C;
+    color: #FFF7FC;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 4px 15px rgba(70, 40, 75, 0.20);
+}
+
+
+/* LOGO */
+
+.logo {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #F9EEB1;
+}
+
+
+/* MENU */
+
+.navegacao {
+    display: flex;
+    gap: 30px;
+}
+
+.navegacao a {
+    color: #FFF7FC;
+    text-decoration: none;
+
+    font-weight: 500;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+
+/* Efeito ao passar o mouse */
+
+.navegacao a:hover {
+    color: #F9EEB1;
+}
+
+
+/* Linha abaixo do link */
+
+.navegacao a::after {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+    height: 2px;
+
+    background-color: #F9EEB1;
+
+    left: 0;
+    bottom: -5px;
+
+    transition: 0.3s;
+}
+
+.navegacao a:hover::after {
+    width: 100%;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 80px 10%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6C1E9C,
+            #5F4790
+        );
+
+    color: #FFF7FC;
+
+    overflow: hidden;
+}
+
+
+/* TEXTO DO HERO */
+
+.hero-texto {
+    max-width: 650px;
+}
+
+.subtitulo {
+    color: #F9EEB1;
+
+    font-size: 0.85rem;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: 'Cinzel', serif;
+
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    line-height: 0.95;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: #F9EEB1;
+}
+
+.hero p {
+    max-width: 550px;
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+/* ELEMENTO DECORATIVO */
+
+.hero-decoracao {
+    font-size: 18rem;
+
+    color: rgba(249, 238, 177, 0.15);
+
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+
+/* ==================================================
+   BOTÕES
+================================================== */
+
+.botao {
+    display: inline-block;
+
+    background-color: #F9EEB1;
+    color: #46284B;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.botao:hover {
+    transform: translateY(-4px);
+
+    background-color: #FFF7FC;
+
+    box-shadow: 0 8px 20px rgba(70, 40, 75, 0.25);
+}
+
+
+/* ==================================================
+   SEÇÕES
+================================================== */
+
+.secao {
+    padding: 90px 10%;
+}
+
+
+/* TÍTULOS */
+
+.titulo-secao {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 60px;
+}
+
+.etiqueta {
+    color: #5F4790;
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Cinzel', serif;
+
+    color: #46284B;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    margin-bottom: 15px;
+}
+
+
+/* ==================================================
+   AUTORA
+================================================== */
+
+.autora {
+    background-color: #F9EEB1;
+
+    display: grid;
+
+    grid-template-columns: 350px 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* FOTO */
+
+.imagem-autora {
+    position: relative;
+}
+
+.imagem-autora::before {
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #6C1E9C;
+
+    border-radius: 25px;
+
+    top: 15px;
+    left: 15px;
+
+    z-index: 0;
+}
+
+.imagem-autora img {
+    width: 100%;
+
+    display: block;
+
+    position: relative;
+
+    z-index: 1;
+
+    border-radius: 25px;
+
+    object-fit: cover;
+
+    aspect-ratio: 4 / 5;
+}
+
+
+/* TEXTO */
+
+.texto-autora h2 {
+    margin-bottom: 25px;
+}
+
+.texto-autora > p {
+    margin-bottom: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* CURIOSIDADE */
+
+.curiosidade {
+    background-color: #FFF7FC;
+
+    border-left: 5px solid #6C1E9C;
+
+    padding: 20px;
+
+    margin-top: 25px;
+
+    border-radius: 0 15px 15px 0;
+}
+
+.curiosidade strong {
+    color: #6C1E9C;
+}
+
+
+/* ==================================================
+   LIVROS
+================================================== */
+
+.livros {
+    background-color: #FFF7FC;
+}
+
+
+/* CARD */
+
+.card-livro {
+    max-width: 1000px;
+
+    margin: 0 auto 50px;
+
+    padding: 35px;
+
+    background-color: white;
+
+    border-radius: 25px;
+
+    display: grid;
+
+    grid-template-columns: 280px 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+
+    box-shadow:
+        0 10px 30px rgba(70, 40, 75, 0.10);
+
+    transition: 0.4s;
+}
+
+
+/* HOVER DO CARD */
+
+.card-livro:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(70, 40, 75, 0.18);
+}
+
+
+/* INVERTER CARD */
+
+.card-livro.invertido {
+    grid-template-columns: 1fr 280px;
+}
+
+.card-livro.invertido .capa {
+    order: 2;
+}
+
+
+/* CAPA */
+
+.capa img {
+    width: 100%;
+
+    display: block;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 20px rgba(70, 40, 75, 0.20);
+
+    transition: 0.4s;
+}
+
+.capa img:hover {
+    transform: scale(1.04) rotate(-1deg);
+}
+
+
+/* INFORMAÇÕES */
+
+.numero {
+    color: #6C1E9C;
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.informacoes h3 {
+    font-family: 'Cinzel', serif;
+
+    font-size: 2rem;
+
+    color: #46284B;
+
+    margin: 10px 0 20px;
+}
+
+.informacoes p {
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+/* BOTÃO DOS LIVROS */
+
+.botao-livro {
+    display: inline-block;
+
+    background-color: #6C1E9C;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 20px;
+
+    border-radius: 25px;
+
+    transition: 0.3s;
+}
+
+.botao-livro:hover {
+    background-color: #5F4790;
+
+    transform: translateY(-3px);
+}
+
+
+/* ==================================================
+   FORMULÁRIO
+================================================== */
+
+.contato {
+    background-color: #46284B;
+
+    color: #FFF7FC;
+}
+
+.contato h2 {
+    color: #FFF7FC;
+}
+
+.contato .titulo-secao > p:last-child {
+    color: #F9EEB1;
+}
+
+
+/* FORM */
+
+.formulario {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    background-color: #FFF7FC;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    display: grid;
+
+    gap: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.20);
+}
+
+
+/* CAMPOS */
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.campo label {
+    font-weight: 600;
+
+    color: #46284B;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 2px solid #E7DCEB;
+
+    border-radius: 12px;
+
+    font-family: 'Poppins', sans-serif;
+
+    background-color: white;
+
+    color: #46284B;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+/* FOCO */
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #6C1E9C;
+
+    box-shadow:
+        0 0 0 3px rgba(108, 30, 156, 0.12);
+}
+
+
+/* BOTÃO ENVIAR */
+
+.enviar {
+    width: 100%;
+}
+
+
+/* ==================================================
+   RODAPÉ
+================================================== */
+
+footer {
+    background-color: #6C1E9C;
+
+    color: #FFF7FC;
+
+    text-align: center;
+
+    padding: 30px;
+
+    line-height: 1.8;
+}
+
+footer p:first-child {
+    color: #F9EEB1;
+
+    font-family: 'Cinzel', serif;
+
+    font-size: 1.2rem;
+}
+
+
+/* ==================================================
+   ANIMAÇÃO
+================================================== */
+
+@keyframes flutuar {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==================================================
+   RESPONSIVIDADE
+================================================== */
+
+@media (max-width: 850px) {
+
+    .cabecalho {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .navegacao {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .hero {
+        text-align: center;
+
+        justify-content: center;
+
+        padding: 70px 7%;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-decoracao {
+        display: none;
+    }
+
+
+    .autora {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .imagem-autora {
+        max-width: 350px;
+
+        margin: 0 auto;
+    }
+
+
+    .card-livro,
+    .card-livro.invertido {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .card-livro.invertido .capa {
+        order: 0;
+    }
+
+    .capa {
+        max-width: 280px;
+
+        margin: auto;
+    }
+
+    .informacoes {
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .cabecalho {
+        padding: 18px 5%;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .navegacao {
+        font-size: 0.85rem;
+    }
+
+
+    .secao {
+        padding: 60px 6%;
+    }
+
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+
+    .card-livro {
+        padding: 25px;
+    }
+
+
+    .formulario {
+        padding: 25px;
+    }
+
+}
